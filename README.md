@@ -1,18 +1,17 @@
 <div align="center">
   <!-- <h1><b> Time-LLM </b></h1> -->
   <!-- <h2><b> Time-LLM </b></h2> -->
-  <h1> (NeurIPS'26) Smooth Piecewise Cutting for Neural Operator to Handle Discontinuities and Sharp Transitions </h1>
+  <h1> (NeurIPS'26) Cut-DeepONet </h1>
 </div>
 
 This repository is the official implementation of [Smooth Piecewise Cutting for Neural Operator to Handle Discontinuities and Sharp Transitions](https://arxiv.org/abs/2605.19823) by Ha Dang, Sebastian Schmidt and Jürgen Hesser.
 
 ## Proposed Method
 
-**Idea:** We propose a two-stage training framework that augments neural operators to focus on learning the smooth components while ignoring discontinuities and sharp transitions.
+**<u>Idea</u>:** We propose a two-stage training framework that augments neural operators to focus on learning the smooth components while ignoring discontinuities and sharp transitions. 
 
 ![Method](figures/overview_method.png)
 
-The continuous representations used by neural operators can struggle to accurately approximate output functions that contain discontinuities. Rather than attempting to directly capture these discontinuities through high-frequency features, our key idea is to represent a discontinuous solution as a combination of several smooth components. The network only needs to learn the smooth components while ignoring the discontinuities. Therefore, we reformulate the problem so that the neural operator ignores them during training and focuses on the smooth regions. Because the transformed problem is smooth, the model can be trained more easily using lower-resolution data.
 
 ## Results
 
